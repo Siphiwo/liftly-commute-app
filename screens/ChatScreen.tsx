@@ -14,7 +14,7 @@ export default function ChatScreen() {
   const navigation = useNavigation();
 
   const handleChatPress = (chat: any) => {
-    navigation.navigate('ChatDetail' as never, { chat } as never);
+    navigation.navigate('ChatDetail', { chat } as any);
   };
 
   const renderChatItem = ({ item }: any) => (

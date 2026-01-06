@@ -71,6 +71,7 @@ export default function HomeScreen() {
     const homeRadius = userProfile.isPassengerOnly ? PASSENGER_DEFAULT_RADIUS : userProfile.homeRadius;
     const workRadius = userProfile.isPassengerOnly ? PASSENGER_DEFAULT_RADIUS : userProfile.workRadius;
     return (
+      <TouchableOpacity onPress={() => handleUserPress(item)}>
       <View style={{ justifyContent: "flex-end", alignItems: "flex-start", marginHorizontal: 5, paddingBottom: 10, backgroundColor: '#fff', borderRadius: 14, position: 'relative', padding: 4 }}>
         <View style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'absolute', top: 0, right: 4, bottom: 32, zIndex:2, gap: 16, padding: 6, borderTopRightRadius: 8, borderBottomRightRadius: 8 }}>
           <View style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
@@ -97,6 +98,7 @@ export default function HomeScreen() {
         </View>
         <Text style={{ fontSize: 14, fontWeight: 'bold', marginTop: 5, paddingHorizontal: 10 }}>{item.name}</Text>
       </View>
+      </TouchableOpacity>
     )
   }
 
